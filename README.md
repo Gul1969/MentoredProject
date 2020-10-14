@@ -1,7 +1,5 @@
 # Mentored Project
 
-# ChallengeWk4
-
 ## Be competent in the use of Ansible, Jenkins, NGINX, Docker, SAST and DAST testing 
 
 ### Why are we doing this? 
