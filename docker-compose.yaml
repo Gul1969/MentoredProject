@@ -2,32 +2,32 @@ version: "3.7"
 services:
   service1:
     build:
-      context: /home/student/NBSMentoredChallenge/service-1/
-      dockerfile: Dockerfile
+      context: /home/student/MentoredProject/service-1/
+      dockerfile: dockerfile
     ports:
     - target: 5000
       published: 5000
       protocol: tcp
   service2:
     build:
-      context: /home/student/NBSMentoredChallenge/service-2/
-      dockerfile: Dockerfile
+      context: /home/student/MentoredProject/service-2/
+      dockerfile: dockerfile
     ports:
     - target: 5001
       published: 5001
       protocol: tcp
   service3:
     build:
-      context: /home/student/NBSMentoredChallenge/service-3/
-      dockerfile: Dockerfile
+      context: /home/student/MentoredProject/service-3/
+      dockerfile: dockerfile
     ports:
     - target: 5002
       published: 5002
       protocol: tcp
   service4:
     build:
-      context: /home/student/NBSMentoredChallenge/service-4/
-      dockerfile: Dockerfile
+      context: /home/student/MentoredProject/service-4/
+      dockerfile: dockerfile
     ports:
     - target: 5003
       published: 5003
