@@ -1,14 +1,20 @@
+
 pipeline {
 	agent any
 	stages {
-		stage("Check and Install Docker with Ansible"){
+		stage("Check Docker & Docker-Compose is installed / install with Ansible"){
 			steps {
-				sh "./scripts/playbook.yaml"
+				sh "./scripts/playbook.sh"
 			}
 		}
-		stage("Load Nexus on port 8081 and Repo on 8082"){
+		stage("Perform SAST Testing with Sonarqube"){
 			steps {
-				sh "./scripts/installnexus.sh"
+				sh "./scripts/sonarqube.sh"
+			}
+		}
+		stage("Perform Unit Testing with pytest & pytest-cov"){
+			steps {
+				sh "./scripts/pytest.sh"
 			}
 		}
 		stage("Build images with docker-compose"){
@@ -16,9 +22,9 @@ pipeline {
 				sh "./scripts/build.sh"
 			}
 		}
-		stage("Push image to Nexus Repository 8082"){
+		stage("Tag & Push image to Nexus Repository 8082"){
 			steps{
-				sh "./scripts/run.sh"
+				sh "./scripts/push.sh"
 			}
 		}
 		stage("Run containers with recently build images"){
