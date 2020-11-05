@@ -1,0 +1,31 @@
+- hosts: 127.0.0.1
+  connection: local
+  become: true
+  tasks:
+  - name: "Install Required System Packages"
+    apt: name={{ item }} state=latest
+    loop: [ "apt-transport-https", "ca-certificates", "curl", "software-properties-common" ]
+
+  - name: "Add Docker APT key"
+    apt_key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      state: present
+
+  - name: "Add Docker Repository"
+    apt_repository:
+      repo: deb https://download.docker.com/linux/ubuntu bionic stable
+      state: present
+
+  - name: "Install Docker-ce"
+    apt: name=docker-ce state=latest
+    
+  - name: "Install docker-compose"
+    get_url:
+      url: https://github.com/docker/compose/releases/download/1.25.1-rc1/docker-compose-Linux-x86_64
+      dest: /usr/local/bin/docker-compose
+      mode: "u+x,g+x"
+
+  - name: "Start Docker"
+    service:
+      name: docker
+      state: started
