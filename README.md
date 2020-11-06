@@ -4,6 +4,7 @@
 
 ### Why are we doing this? 
 
+This project is an excellent vehicle to test, reinforce and challenge all the skills that we learned individually through the first 4  weeks of the QA bootcamp. The brief for the task was to deploy a python application composed of 4 separate services. 
 
 ### How I expected the challenge to go. 
 
