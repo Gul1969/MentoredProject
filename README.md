@@ -2,9 +2,23 @@
 
 ## Be competent in the use of Ansible, Jenkins, NGINX, Docker, SAST and DAST testing 
 
-### Why are we doing this? 
+### Why are we doing this?
 
-This project is an excellent vehicle to test, challenge and put into practice the full range of skills that we learned throughout the first 4  weeks of the QA bootcamp. The brief for this task was to deploy a python application composed of 4 separate services simply labelled 
+This project is an excellent vehicle to test, challenge and put into practice the full range of skills that we learned throughout the first 4 weeks of the QA bootcamp. The brief for this task was to deploy a python application composed of 4 separate services simply labelled service 1, 2, 3 and 4. Service-2 generated 5 random lower-case letters, these were also listed at port 5001. Simultaneously service-3 generated 5 random numbers in the range 0 to 9, these were listed at port 5002. Both of these services also output their data to service-4 which generated a random 10 character username and proceeded to output this to service-1. Service-1 then posted the username to port 5000 and decided if the posted username was worthy of a prize, if yes it posted the amount of prize money won.
+
+The brief also required the use of:
+•	Docker/Docker-compose
+•	Ansible
+•	Jenkins
+•	Nexus
+•	SAST Testing
+In addition, the task included documenting as many metrics as possible and reports on them in the README file. These metrics included
+•	Testing Coverage
+•	Deployment Success
+•	Build Logs
+•	Security Risks
+This Git repository was created comprising of files containing code for the 4 services provided as well as the files created to enable the deployment. These include Dockerfiles, playbooks, reports, scripts and screen images showing project progress as well as the output of the various tools used. 
+
 
 ### How I expected the challenge to go. 
 
