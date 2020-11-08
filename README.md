@@ -91,8 +91,12 @@ Code coverage is the percentage of code which is covered by automated tests. In 
 
 
 
+
+
 #### Service-2 test report:
 ![pytests](/Metrics/pytest_coverage_service2.png)
+
+
 
 
 
@@ -101,8 +105,12 @@ Code coverage is the percentage of code which is covered by automated tests. In 
 
 
 
+
+
 #### Service-4 test report:
 ![pytests](/Metrics/pytest_coverage_service4.png)
+
+
 
 
 
