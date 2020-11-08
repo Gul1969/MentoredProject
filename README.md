@@ -14,7 +14,7 @@ Simultaneously service-3 generated 5 random numbers in the range 0 to 9, these w
 
 ![Apps run](/Metrics/service3_port5002.png)
 
-Both of these services also output their data to service-4 which generated a random 10 character username and proceeded to output this to service-1. Service-1 then posted the username to port 5000 and decided if the posted username was worthy of a prize, if yes it posted the amount of prize money won.
+Both of these services also output their data to service-4 which generated a random username from the characters presented and proceeded to output this to service-1. Service-1 then posted the username to port 5000 and decided if the posted username was worthy of a prize, if yes it posted the amount of prize money won.
 
 ![Apps run](/Metrics/App_running_on_port_5003.png)
 
@@ -38,7 +38,11 @@ This Git repository was created comprising of files containing code for the 4 se
 
 ### How I expected the challenge to go. 
 
-I looked forward to the challenge of the task as it was an opportunity to combine everything learned so far. I had an overall idea of how I was going to put together the tools and considered a few options. Looking at the brief it was obvious that Docker would be used to containerise the 4 services and Docker-compose would be necessary for the various containers to communicate. I expected Ansible to be the obvious choice to deploy Docker, Docker-compose as well as the 4 services via a playbook. It was necessary to create a Dockerfile per service which I wrote into each service directory. I had to decide how I was going to deploy Jenkins and it made more sense to install it on the Virtual Machine (VM) and use a Jenkinsfile pipeline to setup Ansible, Docker, Docker-compose and containerise the services, perform SAST tests, perform unit tests, build the images, tag and push them to Nexus and finally run the latest build. This would mean I had fulfilled the primary brief. I was confident that I could achieve this, especially as I had access to each of the tutorial demo’s which I referred to frequently during the project. I also expected I would hit road blocks along the way but had the piece of mind of knowing I could get assistance from cohort colleagues as well as our QA tutor Ben. 
+I looked forward to the challenge of the task as it was an opportunity to combine everything learned so far. I had an overall idea of how I was going to put together the tools and considered a few options. Looking at the brief it was obvious that Docker would be used to containerise the 4 services and Docker-compose would be necessary for the various containers to communicate. 
+
+![docker](/Metrics/Services_containered.png)
+
+I expected Ansible to be the obvious choice to deploy Docker, Docker-compose as well as the 4 services via a playbook. It was necessary to create a Dockerfile per service which I wrote into each service directory. I had to decide how I was going to deploy Jenkins and it made more sense to install it on the Virtual Machine (VM) and use a Jenkinsfile pipeline to setup Ansible, Docker, Docker-compose and containerise the services, perform SAST tests, perform unit tests, build the images, tag and push them to Nexus and finally run the latest build. This would mean I had fulfilled the primary brief. I was confident that I could achieve this, especially as I had access to each of the tutorial demo’s which I referred to frequently during the project. I also expected I would hit road blocks along the way but had the piece of mind of knowing I could get assistance from cohort colleagues as well as our QA tutor Ben. 
 
 ### What went well? 
 
