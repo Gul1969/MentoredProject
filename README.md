@@ -34,6 +34,25 @@ Formulating a strategy at the beginning meant I could build a roadmap to the end
 
 ### What didn't go as planned? 
 
+When I started the project, I intended to complete the stretch goals as well, these included:
+-	Use NGINX as a reverse proxy
+-	Version Docker images
+-	Include DAST Testing and Artefact Scanning
+However, the project progressed at a slower rate than I anticipated over the 4-week period. Some of this stemmed from additional time spent reviewing relevant tutorial demos. The VM’s we used automatically reset every weekend so that by every Monday the terminals had to be re-configured with pre-requisite installations that included:
+-	Git
+-	Curl
+-	Vim
+In addition, in the first few weeks it was necessary to repeatedly install:
+-	Python-pip
+-	Python3
+-	Jenkins
+-	Docker
+-	Docker-compose
+-	Ansible
+-	Nexus
+These pre-requisite steps were necessary at the early stages in order to make sure all the individual steps of the project worked so they could confidently be strung together in a pipeline later. Repeated installation was also necessary when the VM internet connections failed, it was necessary to reset or reboot the VM. On some occasions this also wiped the VM of any pre-configurations which also slowed down progress. In particular in the last week of the project VM resets and connection issues were more frequent. Unfortunately this issue was common to many of my colleagues and no satisfactory solution was found. The added delays meant that the stretch goals were not completed in the 4 week timeframe.
+
+! [lost connection](/Metrics/Connection died.png)
 
 ### Possible improvements for future challenges.
 
