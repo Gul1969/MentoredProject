@@ -84,6 +84,14 @@ I recognise that I focused at the early stages on creating a script to automate 
 
 ### Testing Coverage
 
+![pytests](/Metrics/pytest_coverage_service1.png)
+
+![pytests](/Metrics/pytest_coverage_service2.png)
+
+![pytests](/Metrics/pytest_coverage_service3.png)
+
+![pytests](/Metrics/pytest_coverage_service4.png)
+
 
 ### Deployment Success
 
