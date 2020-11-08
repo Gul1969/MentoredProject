@@ -142,6 +142,8 @@ Before success there is much failure as evidenced by 12 failed Jenkins builds:
 .
 .
 .
+13th was the charm.....green all the way :sweat_smile:
+
 ![deployment](/Metrics/1st_jenkins_success.png)
 
 .
