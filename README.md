@@ -52,7 +52,7 @@ In addition, in the first few weeks it was necessary to repeatedly install:
 -	Nexus
 These pre-requisite steps were necessary at the early stages in order to make sure all the individual steps of the project worked so they could confidently be strung together in a pipeline later. Repeated installation was also necessary when the VM internet connections failed, it was necessary to reset or reboot the VM. On some occasions this also wiped the VM of any pre-configurations which also slowed down progress. In particular in the last week of the project VM resets and connection issues were more frequent. Unfortunately this issue was common to many of my colleagues and no satisfactory solution was found. The added delays meant that the stretch goals were not completed in the 4 week timeframe.
 
-!(https://github.com/Gul1969/MentoredProject/blob/master/Metrics/Connection%20died.png)
+!(/Gul1969/MentoredProject/blob/master/Metrics/Connection died.png)
 
 ### Possible improvements for future challenges.
 
