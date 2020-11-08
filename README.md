@@ -172,6 +172,7 @@ It was also necessary to configure Nexus which was used as the artifact reposito
 .
 .
 The final stage of the Jenkinsfile pipeline was to run the latest build, which showed the generated username and possible winning prize:
+
 ![deployment](/Metrics/App_running_on_port_5003.png)
 
 .
