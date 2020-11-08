@@ -121,12 +121,14 @@ All the reports show passes and 100% coverage of code in every service, this ind
 ### Deployment Success
 
 Before success there is much failure as evidenced by 12 failed Jenkins builds:
+
 .
 .
 .
 .
 .
 ![deployment](/Metrics/failed_jenkins_builds.png)
+
 .
 .
 .
@@ -134,30 +136,35 @@ Before success there is much failure as evidenced by 12 failed Jenkins builds:
 .
 
 ![deployment](/Metrics/successful_jenkins_build.png)
+
 .
 .
 .
 .
 .
 ![deployment](/Metrics/1st_jenkins_success.png)
+
 .
 .
 .
 .
 .
 ![deployment](/Metrics/console_output_success.png)
-.
-.
-.
-.
-.
-![deployment](/Metrics/Setting_up_Nexus.pn).
+
 .
 .
 .
 .
 .
 ![deployment](/Metrics/Setting_up_Nexus.png)
+
+.
+.
+.
+.
+.
+![deployment](/Metrics/App_running_on_port_5003.png)
+
 .
 .
 .
