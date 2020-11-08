@@ -72,13 +72,15 @@ These pre-requisite steps were necessary at the early stages in order to make su
 
 ![connection](/Metrics/Connection_died.png)
 
+.........................................................................................................................................................................................................................
+
 ### Possible improvements for future challenges.
 
 I recognise that I focused at the early stages on creating a script to automate the pre-requisite stages of the project in configuring a fresh VM. In hindsight this did not save me as much time as I anticipated it might. In future in similar circumstances it might be best to ask colleagues if an automated solution has already been arrived at. Alternatively, best practice may include devoting a limited amount of the time budget to explore a solution, beyond this limit a solution may not free-up enough additional time to be worthwhile. I would love to have had time to tackle the stretch goals but time was the constraint. 
 
 ![connection](/Metrics/VM_connection.png)
 
-
+.........................................................................................................................................................................................................................
 
 # Reports
 
@@ -88,33 +90,23 @@ Code coverage is the percentage of code which is covered by automated tests. In 
 
 #### Service-1 test report:
 ![pytests](/Metrics/pytest_coverage_service1.png)
-.
-.
-.
-.
-.
+
+.........................................................................................................................................................................................................................
+
 #### Service-2 test report:
 ![pytests](/Metrics/pytest_coverage_service2.png)
-.
-.
-.
-.
-.
+
+.........................................................................................................................................................................................................................
+
 #### Service-3 test report:
 ![pytests](/Metrics/pytest_coverage_service3.png)
-.
-.
-.
-.
-.
+
+.........................................................................................................................................................................................................................
+
 #### Service-4 test report:
 ![pytests](/Metrics/pytest_coverage_service4.png)
-.
-.
-.
-.
-.
 
+.........................................................................................................................................................................................................................
 
 All the reports show passes and 100% coverage of code in every service, this indicates very low risk of bugs and high chance of reliability. All the reports indicate 1 yellow warning, flagging a deprecation warning for flask.json which which may be superceded from version 2.0.0. This will likely affect the future usability of the code or make it unreliable if this was code to be released for general use. This early testing phase is an opportunity to remedy the warning by updating to the latest version of flask.json. 
 
@@ -122,99 +114,74 @@ All the reports show passes and 100% coverage of code in every service, this ind
 
 Before success there is much failure as evidenced by these initial 12 failed Jenkins builds:
 
-.
-.
-.
-.
-.
+
+.........................................................................................................................................................................................................................
+
+
 ![deployment](/Metrics/failed_jenkins_builds.png)
 
-.
-.
-.
-.
-.
+.........................................................................................................................................................................................................................
 
 13th was the charm.....green all the way........:sweat_smile:
 
 ![deployment](/Metrics/1st_jenkins_success.png)
 
-.
-.
-.
-.
-.
+.........................................................................................................................................................................................................................
+
 
 Additional builds were tested to ensure successful completion of the Sonarqube and Nexus stages of the build:
 
 ![deployment](/Metrics/successful_jenkins_build.png)
-.
-.
-.
-.
-.
+
+.........................................................................................................................................................................................................................
+
 
 SAST-testing was achieved by using Sonarqube, this lands on port 9000 as default, it had to be configured on Jenkins after installing the plugin:
 
 ![deployment](/Metrics/Sonarqube_alternate_scan.png)
 
-.
-.
-.
-.
-.
+
+..........................................................................................................................................................................................................................
+
 
 It was also necessary to configure Nexus which was used as the artifact repository:
 
 ![deployment](/Metrics/Setting_up_Nexus.png)
-.
-.
-.
-.
-.
+
+.........................................................................................................................................................................................................................
+
 Images created by each build were pushed to Nexus at port 8081:
 
 ![deployment](Metrics/Nexus_image_repo.png)
 
-.
-.
-.
-.
-.
+.........................................................................................................................................................................................................................
+
 
 The final stage of the Jenkinsfile pipeline was to run the latest build, which showed the generated username and possible winning prize:
 
 ![deployment](/Metrics/App_running_on_port_5003.png)
 
-.
-.
-.
-.
-.
+.........................................................................................................................................................................................................................
+
+
 ### Build Logs
 
-.
-.
-.
-.
-.
+.........................................................................................................................................................................................................................
 
 Build logs provide a detailed report of each stage of the build, precisely what each stage entails and processes that take place. Also known as the console output, the report indicates success or failure at the end of the build log.:
-.
-.
-.
-.
-.
+
+
+.........................................................................................................................................................................................................................
+
+
 
 ![deployment](/Metrics/console_success_output.png)
 
 Build logs are useful for locating failures in the build process and helping with troubleshooting. All the initial 12 failed builds stumbled at the first stage indicating 'permission denied'. The issue however would require a multitude of tweaks including giving Jenkins requisite permissions as well as making every single file in the service codes executable.
 
-.
-.
-.
-.
-.
+
+.........................................................................................................................................................................................................................
+
 
 ### Security Risks
 
@@ -224,19 +191,19 @@ The first Sonarqube scan result flagged 2 bugs and 5 code smells, this is displa
 
 ![security](/Metrics/(Sonarqube_scan_1st_result.png)
 
-.............................................................................................................
+.........................................................................................................................................................................................................................
 
 Sonarqube provided additional reports that include scans of the individual lines of code in each service:
 
 ![security](/Metrics/SAST_code_analysis.png)
 
-..............................................................................................................
+..........................................................................................................................................................................................................................
 
 The bugs that were picked up in the first scan refer Sonarqubes interpretation of the HTML format in the code.
 
 ![security](/Metrics/(sonarqube_bugs_scan_result.png)
 
-..............................................................................................................
+..........................................................................................................................................................................................................................
 
 ![security](/Metrics/SAST_low_risks.png)
 ![security](/Metrics/SAST_medium_risks.png)
@@ -272,6 +239,8 @@ The bugs that were picked up in the first scan refer Sonarqubes interpretation o
 ![security](/Metrics/(Sonarqube_scan_3.png)
 
 ![security](/Metrics/(Sonarqube_scan_jenkins_result.png)
+
+.........................................................................................................................................................................................................................
 
 
 ## Tasks
