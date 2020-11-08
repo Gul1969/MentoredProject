@@ -120,7 +120,7 @@ All the reports show passes and 100% coverage of code in every service, this ind
 
 ### Deployment Success
 
-Before success there is much failure as evidenced by 12 failed Jenkins builds:
+Before success there is much failure as evidenced by these initial 12 failed Jenkins builds:
 
 .
 .
