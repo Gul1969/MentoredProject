@@ -30,6 +30,7 @@ I looked forward to the challenge of the task as it was an opportunity to combin
 
 ### What went well? 
 
+Formulating a strategy at the beginning meant I could build a roadmap to the end goal, I found that the one I selected to follow outlined above worked very well for me. I was able to understand the brief quickly and having a roadmap to work to meant I could break the problem down into separate individual tasks to make these worked in isolation. Subsequently once I verified each prior step functioned I was able to then string each step together into a Jenkins pipeline. Following this it was necessary to configure Jenkins, Sonarqube and Nexus to meet the requirements of the brief. Each of these steps were tackled with varying success, some parts requiring longer to complete than others. Where blockers were encountered I found that when I sought assistance from colleagues, help came rapidly and blocks were removed effectively. As a side-effect these were opportunities to fill knowledge gaps and I was also able to help when a request came for assistance. A very effective method of working collaboratively was the setting up of a Teams group with comprising of the 6 members of my line and task manager group, we named ourselves “The Sixpack”. This was set up to promote team cohesion through social interaction but served as an effective means whereby we were able to quickly share knowledge or help each other move our projects along.
 
 ### What didn't go as planned? 
 
