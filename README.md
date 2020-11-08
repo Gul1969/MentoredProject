@@ -142,7 +142,7 @@ Before success there is much failure as evidenced by 12 failed Jenkins builds:
 .
 .
 .
-13th was the charm.....green all the way :sweat_smile:
+13th was the charm.....green all the way........:sweat_smile:
 
 ![deployment](/Metrics/1st_jenkins_success.png)
 
@@ -151,7 +151,9 @@ Before success there is much failure as evidenced by 12 failed Jenkins builds:
 .
 .
 .
-![deployment](/Metrics/console_output_success.png)
+SAST-testing was achieved by using Sonarqube, this lands on port 9000 as default, it had to be congigured on Jenkins after installing the plugin:
+
+![deployment](/Metrics/Sonarqube_alternate_scan.png)
 
 .
 .
