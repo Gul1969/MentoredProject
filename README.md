@@ -223,15 +223,19 @@ The first Sonarqube scan result flagged 2 bugs and 5 code smells, this is displa
 ![security](/Metrics/SAST_security_line_code.png)
 
 ![security](/Metrics/(Sonarqube_scan_1st_result.png)
+
 .............................................................................................................
+
 Sonarqube provided additional reports that include scans of the individual lines of code in each service:
 
 ![security](/Metrics/SAST_code_analysis.png)
+
 ..............................................................................................................
 
 The bugs that were picked up in the first scan refer Sonarqubes interpretation of the HTML format in the code.
 
 ![security](/Metrics/(sonarqube_bugs_scan_result.png)
+
 ..............................................................................................................
 
 ![security](/Metrics/SAST_low_risks.png)
