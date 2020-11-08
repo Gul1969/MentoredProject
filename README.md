@@ -144,6 +144,7 @@ Before success there is much failure as evidenced by these initial 12 failed Jen
 .
 .
 .
+
 Additional builds were tested to ensure successful completion of the Sonarqube and Nexus stages of the build:
 
 ![deployment](/Metrics/successful_jenkins_build.png)
@@ -162,6 +163,7 @@ SAST-testing was achieved by using Sonarqube, this lands on port 9000 as default
 .
 .
 .
+
 It was also necessary to configure Nexus which was used as the artifact repository, images created by each build were pushed to Nexus at port 8082:
 
 ![deployment](/Metrics/Setting_up_Nexus.png)
@@ -171,6 +173,7 @@ It was also necessary to configure Nexus which was used as the artifact reposito
 .
 .
 .
+
 The final stage of the Jenkinsfile pipeline was to run the latest build, which showed the generated username and possible winning prize:
 
 ![deployment](/Metrics/App_running_on_port_5003.png)
@@ -181,15 +184,24 @@ The final stage of the Jenkinsfile pipeline was to run the latest build, which s
 .
 .
 ### Build Logs
+
 .
 .
 .
 .
 .
+
 Build logs provide a detailed report of each stage of the build, precisely what each stage entails and processes that take place. Also known as the console output, the report indicates success or failure at the end of the build log.:
+.
+.
+.
+.
+.
+
 ![deployment](/Metrics/console_success_output.png)
 
 Build logs are useful for locating failures in the build process and helping with troubleshooting. All the initial 12 failed builds stumbled at the first stage indicating 'permission denied'. The issue however would require a multitude of tweaks including giving Jenkins requisite permissions as well as making every single file in the service codes executable.
+
 .
 .
 .
