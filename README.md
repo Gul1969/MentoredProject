@@ -66,14 +66,12 @@ These pre-requisite steps were necessary at the early stages in order to make su
 
 ![connection](/Metrics/Connection_died.png)
 
-
-
-
 ### Possible improvements for future challenges.
 
+I recognise that I focused at the early stages on creating a script to automate the pre-requisite stages of the project in configuring a fresh VM. In hindsight this did not save me as much time as I anticipated it might. In future in similar circumstances it might be best to ask colleagues if an automated solution has already been arrived at. Alternatively, best practice may include devoting a limited amount of the time budget to explore a solution, beyond this limit a solution may not free-up enough additional time to be worthwhile. I would love to have had time to tackle the stretch goals but time was the constraint. 
 
+![connection](/Metrics/VM_connection.png)
 
- 
 ## Tasks
  
 Here a Python application that is made up of 4 different services.
