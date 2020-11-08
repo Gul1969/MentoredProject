@@ -74,6 +74,18 @@ I recognise that I focused at the early stages on creating a script to automate 
 
 ![connection](/Metrics/VM_connection.png)
 
+
+
+### Reports
+# Testing Coverage
+# Deployment Success
+# Build Logs
+# Security Risks
+
+
+
+
+
 ## Tasks
  
 Here a Python application that is made up of 4 different services.
