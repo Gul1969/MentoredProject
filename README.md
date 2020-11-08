@@ -164,7 +164,7 @@ SAST-testing was achieved by using Sonarqube, this lands on port 9000 as default
 .
 .
 
-It was also necessary to configure Nexus which was used as the artifact repository, images created by each build were pushed to Nexus at port 8082:
+It was also necessary to configure Nexus which was used as the artifact repository:
 
 ![deployment](/Metrics/Setting_up_Nexus.png)
 .
@@ -172,7 +172,7 @@ It was also necessary to configure Nexus which was used as the artifact reposito
 .
 .
 .
-Images created by each build were pushed to Nexus at port 8082:
+Images created by each build were pushed to Nexus at port 8081:
 
 ![deployment](Metrics/Nexus_image_repo.png)
 
@@ -217,6 +217,57 @@ Build logs are useful for locating failures in the build process and helping wit
 .
 
 ### Security Risks
+
+The first Sonarqube scan result flagged 2 bugs and 5 code smells, this is displayed using a coloured and alphabetized rating system, 5 colours green, light green, yellow, orange, red and A to E respectively: 
+
+![security](/Metrics/SAST_security_line_code.png)
+
+![security](/Metrics/(Sonarqube_scan_1st_result.png)
+.............................................................................................................
+Sonarqube provided additional reports that include scans of the individual lines of code in each service:
+
+![security](/Metrics/SAST_code_analysis.png)
+..............................................................................................................
+
+The bugs that were picked up in the first scan refer Sonarqubes interpretation of the HTML format in the code.
+
+![security](/Metrics/(sonarqube_bugs_scan_result.png)
+..............................................................................................................
+
+![security](/Metrics/SAST_low_risks.png)
+![security](/Metrics/SAST_medium_risks.png)
+![security](/Metrics/SAST_high_risks.png)
+
+![security](/Metrics/SAST_issues_summary.png)
+
+![security](/Metrics/SAST_later_tests.png)
+
+
+
+
+
+![security](/Metrics/SAST_reliability.png)
+
+![security](/Metrics/SAST_reliability_graphic.png)
+
+![security](/Metrics/SAST_risk_rating.png)
+
+![security](/Metrics/SAST_security_line_code.png)
+
+![security](/Metrics/SAST_security_rating.png)
+
+![security](/Metrics/SAST_status_summary.png
+
+![security](/Metrics/(SAST_testing_timeline.png)
+
+![security](/Metrics/(SAST_timeline.png)
+
+
+![security](/Metrics/(Sonarqube_scan.png)
+
+![security](/Metrics/(Sonarqube_scan_3.png)
+
+![security](/Metrics/(Sonarqube_scan_jenkins_result.png)
 
 
 ## Tasks
