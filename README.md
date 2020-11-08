@@ -167,6 +167,14 @@ SAST-testing was achieved by using Sonarqube, this lands on port 9000 as default
 It was also necessary to configure Nexus which was used as the artifact repository, images created by each build were pushed to Nexus at port 8082:
 
 ![deployment](/Metrics/Setting_up_Nexus.png)
+.
+.
+.
+.
+.
+Images created by each build were pushed to Nexus at port 8082:
+
+![deployment](Metrics/Nexus_image_repo.png)
 
 .
 .
