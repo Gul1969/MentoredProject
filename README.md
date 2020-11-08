@@ -76,14 +76,18 @@ I recognise that I focused at the early stages on creating a script to automate 
 
 
 
-### Reports
-# Testing Coverage
-# Deployment Success
-# Build Logs
-# Security Risks
+# Reports
+
+### Testing Coverage
 
 
+### Deployment Success
 
+
+### Build Logs
+
+
+### Security Risks
 
 
 ## Tasks
