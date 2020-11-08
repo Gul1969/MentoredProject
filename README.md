@@ -114,6 +114,8 @@ Code coverage is the percentage of code which is covered by automated tests. In 
 .
 .
 .
+All the reports show passes and 100% coverage of code in every service, this indicates very low risk of bugs and high chance of reliability. All the reports indicate 1 yellow warning, flagging a deprecation warning for flask.json which which may be superceded from version 2.0.0. This will likely affect the future usability of the code or make it unreliable if this was code to be released for general use. This early testing phase is an opportunity to remedy the warning by updating to the latest version of flask.json. 
+
 ### Deployment Success
 
 
