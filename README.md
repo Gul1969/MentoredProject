@@ -135,13 +135,6 @@ Before success there is much failure as evidenced by 12 failed Jenkins builds:
 .
 .
 
-![deployment](/Metrics/successful_jenkins_build.png)
-
-.
-.
-.
-.
-.
 13th was the charm.....green all the way........:sweat_smile:
 
 ![deployment](/Metrics/1st_jenkins_success.png)
@@ -151,7 +144,16 @@ Before success there is much failure as evidenced by 12 failed Jenkins builds:
 .
 .
 .
-SAST-testing was achieved by using Sonarqube, this lands on port 9000 as default, it had to be congigured on Jenkins after installing the plugin:
+Additional builds were tested to ensure successful completion of the Sonarqube and Nexus stages of the build:
+
+![deployment](/Metrics/successful_jenkins_build.png)
+.
+.
+.
+.
+.
+
+SAST-testing was achieved by using Sonarqube, this lands on port 9000 as default, it had to be configured on Jenkins after installing the plugin:
 
 ![deployment](/Metrics/Sonarqube_alternate_scan.png)
 
@@ -160,6 +162,8 @@ SAST-testing was achieved by using Sonarqube, this lands on port 9000 as default
 .
 .
 .
+It was also necessary to configure Nexus which was used as the artifact repository, images created by each build were pushed to Nexus at port 8082:
+
 ![deployment](/Metrics/Setting_up_Nexus.png)
 
 .
@@ -167,6 +171,7 @@ SAST-testing was achieved by using Sonarqube, this lands on port 9000 as default
 .
 .
 .
+The final stage of the Jenkinsfile pipeline was to run the latest build, which showed the generated username and possible winning prize:
 ![deployment](/Metrics/App_running_on_port_5003.png)
 
 .
@@ -180,7 +185,10 @@ SAST-testing was achieved by using Sonarqube, this lands on port 9000 as default
 .
 .
 .
+Build logs provide a detailed report of each stage of the build, precisely what each stage entails and processes that take place. Also known as the console output, the report indicates success or failure at the end of the build log.:
 ![deployment](/Metrics/console_success_output.png)
+
+Build logs are useful for locating failures in the build process and helping with troubleshooting. All the initial 12 failed builds stumbled at the first stage indicating 'permission denied'. The issue however would require a multitude of tweaks including giving Jenkins requisite permissions as well as making every single file in the service codes executable.
 .
 .
 .
