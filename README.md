@@ -86,15 +86,20 @@ I recognise that I focused at the early stages on creating a script to automate 
 Code coverage is the percentage of code which is covered by automated tests. In general, a code coverage system collects information about the running program and then combines that with source information to generate a report on the test suite's code coverage. Pytest is a framework that makes building simple and scalable tests easy. Code coverage of 70-80% is a reasonable goal for system test of most projects with most coverage metrics. Coverage tests for this project were carried out by a pytest module utilising --cov. The unit test reports are presented below, a report was generated for the code in each service:
 
 
-
 #### Service-1 test report:
 ![pytests](/Metrics/pytest_coverage_service1.png)
+
+
 
 #### Service-2 test report:
 ![pytests](/Metrics/pytest_coverage_service2.png)
 
+
+
 #### Service-3 test report:
 ![pytests](/Metrics/pytest_coverage_service3.png)
+
+
 
 #### Service-4 test report:
 ![pytests](/Metrics/pytest_coverage_service4.png)
