@@ -87,7 +87,7 @@ I recognise that I focused at the early stages on creating a script to automate 
 ### Testing Coverage
 Code coverage is the percentage of code which is covered by automated tests. In general, a code coverage system collects information about the running program and then combines that with source information to generate a report on the test suite's code coverage. Pytest is a framework that makes building simple and scalable tests easy. Code coverage of 70-80% is a reasonable goal for system test of most projects with most coverage metrics. Coverage tests for this project were carried out by a pytest module utilising --cov. The unit test reports are presented below, a report was generated for the code in each service:
 
-
+.........................................................................................................................................................................................................................
 #### Service-1 test report:
 ![pytests](/Metrics/pytest_coverage_service1.png)
 
@@ -106,16 +106,17 @@ Code coverage is the percentage of code which is covered by automated tests. In 
 #### Service-4 test report:
 ![pytests](/Metrics/pytest_coverage_service4.png)
 
-.........................................................................................................................................................................................................................
 
 All the reports show passes and 100% coverage of code in every service, this indicates very low risk of bugs and high chance of reliability. All the reports indicate 1 yellow warning, flagging a deprecation warning for flask.json which which may be superceded from version 2.0.0. This will likely affect the future usability of the code or make it unreliable if this was code to be released for general use. This early testing phase is an opportunity to remedy the warning by updating to the latest version of flask.json. 
+
+
+.........................................................................................................................................................................................................................
+
 
 ### Deployment Success
 
 Before success there is much failure as evidenced by these initial 12 failed Jenkins builds:
 
-
-.........................................................................................................................................................................................................................
 
 
 ![deployment](/Metrics/failed_jenkins_builds.png)
@@ -170,15 +171,12 @@ The final stage of the Jenkinsfile pipeline was to run the latest build, which s
 
 Build logs provide a detailed report of each stage of the build, precisely what each stage entails and processes that take place. Also known as the console output, the report indicates success or failure at the end of the build log.:
 
-
 .........................................................................................................................................................................................................................
-
 
 
 ![deployment](/Metrics/console_success_output.png)
 
 Build logs are useful for locating failures in the build process and helping with troubleshooting. All the initial 12 failed builds stumbled at the first stage indicating 'permission denied'. The issue however would require a multitude of tweaks including giving Jenkins requisite permissions as well as making every single file in the service codes executable.
-
 
 .........................................................................................................................................................................................................................
 
@@ -199,23 +197,47 @@ Sonarqube provided additional reports that include scans of the individual lines
 
 ..........................................................................................................................................................................................................................
 
-The bugs that were picked up in the first scan refer Sonarqubes interpretation of the HTML format in the code.
+The bugs that were picked up in the first scan refer to Sonarqubes interpretation of the HTML format in the code which it has flagged as a possible issue:
 
 ![security](/Metrics/(sonarqube_bugs_scan_result.png)
 
 ..........................................................................................................................................................................................................................
 
+
+Six low risk security hotspots have been flagged by Sonarqube, all of these are centered around the use of http protocol, Sonarqube recommends using https as it i smore secure:
+
 ![security](/Metrics/SAST_low_risks.png)
+
+.........................................................................................................................................................................................................................
+
+Sonarqube has flagged 10 medium security risks which all refer the use of a pseudo-random generator in this context and requests that security risks be considered:
+
 ![security](/Metrics/SAST_medium_risks.png)
+
+.........................................................................................................................................................................................................................
+
+Sonarqube has highlighted 4 high risk security hotspots, these are all referring to Cross-Site Request Forgery (CSRF) risks. A CSRF vulnerability can be exploited by an attacker through trusted operations on a web application. These can be used by an attacker to socially engineer a user to enter sensitive information such a bank details via an unsuspected payment portal which the attacker could persuade a user to visit. The offending site is designed with malicious code that could debit a users account without consent or notice.
 ![security](/Metrics/SAST_high_risks.png)
 
+.........................................................................................................................................................................................................................
+
+This is a summary of the issues identified by Sonarqube, it includes the 2 bugs tagged red (major issue) and 5 code smells tagged light green (minor issue). Each code smell has been given a 5 minute remediation estimate as have the 2 bugs.
 ![security](/Metrics/SAST_issues_summary.png)
+
+.........................................................................................................................................................................................................................
+
+
+Sonarqube keeps a log of all tests for a project and can display the data in a graphical form creating a timeline:
 
 ![security](/Metrics/SAST_later_tests.png)
 
+![security](/Metrics/(SAST_testing_timeline.png)
 
+![security](/Metrics/(SAST_timeline.png)
 
+.........................................................................................................................................................................................................................
 
+Sonarqube also creates a whealth data regarding a variety of metrics including reliability, security, maintainability, coverage and complexity, this data is again displayed graphically with circles sized according to time remediation estimate and coloured according to risk:
 
 ![security](/Metrics/SAST_reliability.png)
 
@@ -228,17 +250,6 @@ The bugs that were picked up in the first scan refer Sonarqubes interpretation o
 ![security](/Metrics/SAST_security_rating.png)
 
 ![security](/Metrics/SAST_status_summary.png
-
-![security](/Metrics/(SAST_testing_timeline.png)
-
-![security](/Metrics/(SAST_timeline.png)
-
-
-![security](/Metrics/(Sonarqube_scan.png)
-
-![security](/Metrics/(Sonarqube_scan_3.png)
-
-![security](/Metrics/(Sonarqube_scan_jenkins_result.png)
 
 .........................................................................................................................................................................................................................
 
