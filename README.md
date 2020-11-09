@@ -187,6 +187,7 @@ The first Sonarqube scan result flagged 2 bugs and 5 code smells, this is displa
 
 ![security](/Metrics/SAST_security_line_code.png)
 
+
 ![security](/Metrics/(Sonarqube_scan_1st_result.png)
 
 .........................................................................................................................................................................................................................
