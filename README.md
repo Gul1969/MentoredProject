@@ -257,7 +257,7 @@ Sonarqube also creates a whealth data regarding a variety of metrics including r
 🔴🟠🟡🟢🔵🟣🔵🟢🟡🟠🔴🟠🟡🟢🔵🟣🔵🟢🟡🟠🔴🟠🟡🟢🔵🟣🔵🟢🟡🟠🔴🟠🟡🟢🔵🟣🔵🟢🟡🟠🔴🟠🟢🔵🟣🔵🟢🟡🟠🔴🟠🟡🟢🔵🟣🔵🟢🟡🟠🔴🟠🟡🟢🔵🟣🔵🟢🟡🟠🟠🟠🟢🔵🟣🔵🟢🟡🟠🔴🟠🟢🟢🔵🟣🔵🟢🟡🟠🔴🔴🟠🟢🟢🔵🟣🔵🟢🟡🟠🔴
 ## Tasks
  
-Here a Python application that is made up of 4 different services.
+Here's a Python application that is made up of 4 different services.
  
 - Service 1 - Central App
 - Service 2 - Provides random numbers
